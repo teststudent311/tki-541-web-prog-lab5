@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>index_Nikolaev_A_M_1</title>
+</head>
+<body>
+<div id="app">
+    <svg :width="width" :height="height">
+        <circle :cx="x" :cy="y" r="10" fill="blue"/>
+    </svg>
+    <div>
+        X: <input v-model="x" type="number" readonly>
+        Y: <input v-model="y" type="number" readonly>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="script1.js"></script>
+</body>
+</html>

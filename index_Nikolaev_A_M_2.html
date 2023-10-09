@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>index_Nikolaev_A_M_2</title>
+</head>
+<body>
+<div id="app">
+    <label v-for="(checkbox, index) in checkboxes" :key="index">
+        <input type="checkbox" v-model="checkbox.value" :value="true">
+        {{ checkbox.label }}
+    </label>
+
+    <div v-if="checkboxes[0].value">
+        <p>{{ formattedReference.russian }}</p>
+    </div>
+    <div v-else-if="checkboxes[1].value">
+        <p>{{ formattedReference.english }}</p>
+    </div>
+    <div v-else-if="checkboxes[2].value">
+        <p>{{ formattedReference.gost }}</p>
+    </div>
+    <div v-else-if="checkboxes[3].value">
+        <p>{{ formattedReference.scopus }}</p>
+    </div>
+    <div v-else-if="checkboxes[4].value">
+        <p>{{ formattedReference.transliteration }}</p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="script2.js"></script>
+</body>
+</html>
